@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    user-select: none
+}
+
+body {
+    background-color: black;
+    animation: start 3s;
+    user-select: none
+}
+
+
+@keyframes start {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+.backg {
+    position: fixed;
+    z-index: 10;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0.3;
+  }
+
+  .backg-overflow {
+    position: relative;
+    width: 300%;
+    height: 300%;
+    background-image: url('img/texture.png');
+    background-position: 0px 0px;
+    background-size: 396px;
+    opacity: 1;
+    animation: rt 0.5s infinite;
+    animation-timing-function: steps(4, end);
+  }
+
+  @keyframes rt {
+  to {
+    transform : rotate(90deg);
+  }
+  }
+
+  .mainlogo {
+    width: 28px;
+    height: 28px;
+    padding-right: 3cap;
+    }

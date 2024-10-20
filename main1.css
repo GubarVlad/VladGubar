@@ -3,13 +3,14 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    user-select: none
+    user-select: none;
 }
 
 body {
     background-color: black;
     animation: start 3s;
-    user-select: none
+    user-select: none;
+    overflow-x: hidden;
 }
 
 

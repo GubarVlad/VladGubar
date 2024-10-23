@@ -3,14 +3,13 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    user-select: none;
+    user-select: none
 }
 
 body {
     background-color: black;
     animation: start 3s;
-    user-select: none;
-    overflow-x: hidden;
+    user-select: none
 }
 
 
@@ -240,7 +239,6 @@ body {
      }
   
      .linkmain {
-      font-size: 15px;
       z-index: 11;
       display: flex;
      padding-left: 33px;
@@ -257,6 +255,7 @@ body {
      }
 
      .textsmall {
+      padding-right: 100px;
       margin-top: 2%;
       margin-left: 23px;
       margin-right: auto;
@@ -276,7 +275,7 @@ body {
       justify-content: center;
       text-align: center;
       margin: 0%;
-      margin-left: 45px;
+      margin-left: 75px;
       margin-top: 10%;
       width: 220px;
       height: 220px;
@@ -285,7 +284,7 @@ body {
      .endtitle {
       opacity: 0.5;
       margin-top: 60%;
-      margin-left: 5px;
+      margin-left: 70px;
       color: white;
       font-size: 10px;
       font-family:"helvetica";
@@ -310,6 +309,35 @@ body {
       font-size: 10px;
       font-family:"helvetica";
   font-weight: 10;
+     }
+
+     .link1 {
+      margin-right: 33px;
+      display: grid;
+      color: white;
+      font-size: 15px;
+      font-family:"helvetica";
+  font-weight: 10;
+  position: relative;
+     }
+
+     .link2 {
+      display: grid;
+      color: white;
+      font-size: 15px;
+      font-family:"helvetica";
+  font-weight: 10;
+  position: relative;
+     }
+
+     .link3 {
+      margin-right: 33px;
+      display: grid;
+      color: white;
+      font-size: 15px;
+      font-family:"helvetica";
+  font-weight: 10;
+  position: relative;
      }
 
      }

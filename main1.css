@@ -240,6 +240,7 @@ body {
      }
   
      .linkmain {
+      font-size: 15px;
       z-index: 11;
       display: flex;
      padding-left: 33px;

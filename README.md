@@ -5,4 +5,4 @@ VERSION
 * enjoy 
 
 P.S 
-The most important thing is not to lose heart 💙💙💙
+The most important thing is not to lose heart 💙

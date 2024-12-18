@@ -1,298 +1,213 @@
 * {
-    padding: 0;
-    margin: 0;
-    cursor: url('img/Ellipse.png'), auto;
-    text-decoration: none;
-    user-select: none
+  z-index: 11;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  user-select: none;
 }
 
 body {
-    background-color: #000000;
-    animation: start 3s;
-    user-select: none
+  background-color: black;
+  animation: start 3s;
+  user-select: none;
 }
-
 
 @keyframes start {
-    0% {opacity: 0;}
-    100% {opacity: 100;}
-}
-
-.head {
-    margin-top: 30px;
-    padding-left: 50px;
-display: flex;
-}
-
-.logo {
-width: 28px;
-height: 28px;
-padding-right: 3cap;
-}
-
-.headtext0 {
-    color: white;
-    font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  margin-left: 20%;
-  font-size: 20px;
-  text-align: right;
-  z-index: 11;
-}
-
-.headtext0:hover {
-    color: #b5b5b6;
-    z-index: 11;
-}
-
-.headtext1:hover {
-color: #b5b5b6;
-z-index: 11;
-}
-
-.headtext1 {
-    color: white;
-    font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  margin-left: 40px;
-  font-size: 20px;
-  text-align: right;
-  z-index: 11;
-}
-
-
-.face {
-    position: relative;
-    margin-top: 10%;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    text-align: center;
-    max-width: 100%
-}
-
-
-.myphoto1 {
-width: 338px;
-height: 450px;
-z-index: 1;
-position: relative;
-justify-content: center;
-text-align: center;
-display: flex;
-max-width: 100%;
-/*animation: startwebdown 1.5s;
-animation-direction: reverse;*/
-}
-
-.myphoto2 {
-    width: 338px;
-    height: 356px;
-    margin-left: -338px;
-    margin-top: 94px;
-    z-index: 10;
-    position: relative;
-    justify-content: center;
-    text-align: center;
-    opacity: 0;
-    animation: img0 0.5s;
-    display: flex;
-    }
-
-
-    .myphoto2:hover {
-        animation: img1 0.5s;
-        opacity: 100;
-    }
-
-@keyframes img1 {
-    0% {opacity: 0;}
-    100% {opacity: 100;}
-}
-
-@keyframes img0 {
-    0% {opacity: 100;}
-    100% {opacity: 0;}
-}
-
-    .Ftext {
-        margin-top: 15%;
-        justify-content: center;
-text-align: center;
-position: absolute;
-max-width: 100%
-    }
-
-
-
-
-    .name {
-        margin: 0;
-        font-size: 80px;
-        opacity: 80%;
-        color: white;
-        font-family: "Cormorant", serif;
-  font-weight: 400;
-  font-style: normal;
-        justify-content: center;
-    text-align: center;
-    position: relative;
-    z-index: 11;
-    max-width: 100%
-    }
-
-    .prof {
-        margin: 0;
-        font-size: 140px;
-        opacity: 80%;
-        color: white;
-        font-family: "Cormorant", serif;
-  font-weight: 400;
-  font-style: normal;
-        justify-content: center;
-    text-align: center;
-    position: relative;
-    z-index: 3;
-    max-width: 100%
-    }
-
-    
-    .year {
-        margin: 0;
-        opacity: 80%;
-        color: white;
-        font-family: "Cormorant", serif;
-  font-weight: 400;
-  font-style: normal;
-        justify-content: center;
-    text-align: center;
-    position: relative;
-    z-index: 3;
-    max-width: 100%
-    }
-
-.link {
-    margin-top: 12%;
-    margin-bottom: 12%;
-    text-decoration: none;
-    z-index: 10;
-}
-
-   .link {
-    font-size: 50px;
-    color: #B5B5B6;
-    font-family: "Cormorant", serif;
-font-weight: 400;
-font-style: normal;
-    justify-content: center;
-text-align: center;
-position: relative;
-text-decoration: none;
-   }
-
-   .linktext0:hover {
-    color: #b5b5b6;
-   }
-
-   .linktext1:hover {
-    color: #b5b5b6;
-   }
-
-   .linktext2:hover {
-    color: #b5b5b6;
-   }
-
-   .linktext3:hover {
-    color: #b5b5b6;
-   }
-
-   .linktext0, .linktext1, .linktext2, .linktext3 {
-    color: white;
-    text-decoration: none;
-   }
-
-   .main {
-    display: flex;
-    justify-content: center;
-text-align: center;
-position: relative;
-   }
-
-  
-
-   @media (max-width: 768px) {
-   
-    .name {
-        font-size: 60px;
-        
-    }
-
-    .prof {
-        font-size: 85px;
-    }
-
-    .Ftext {
-        margin-top: 40%;
-    }
-
-    .link {
-        font-size: 30px;
-    }
-
-.head {
-    opacity: 0;
-}
-
-   }
-
-
-   .backg {
-    position: fixed;
-    z-index: 10;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 100vh;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    opacity: 0.3;
+  0% {
+      opacity: 0;
   }
-
-  .backg-overflow {
-    position: relative;
-    width: 300%;
-    height: 300%;
-    background-image: url('img/texture.png');
-    background-position: 0px 0px;
-    background-size: 396px;
-    opacity: 1;
-    animation: rt 0.5s infinite;
-    animation-timing-function: steps(4, end);
+  100% {
+      opacity: 100;
   }
+}
 
-  @keyframes rt {
+@font-face {
+  font-family: "helvetica";
+  src: url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("woff"),
+      url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("opentype"),
+      url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("truetype");
+}
+
+.backg {
+  position: fixed;
+  z-index: 9;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+}
+
+.backg-overflow {
+  position: relative;
+  width: 300%;
+  height: 300%;
+  background-image: url('img/texture.png');
+  background-position: 0px 0px;
+  background-size: 396px;
+  opacity: 1;
+  animation: rt 0.5s infinite;
+  animation-timing-function: steps(4, end);
+}
+
+@keyframes rt {
   to {
-    transform : rotate(90deg);
+      transform: rotate(90deg);
   }
+}
+
+.mainlogo {
+  position: fixed;
+  z-index: 11;
+  width: auto;
+  height: 95px;
+  top: 9px;
+  left: 25px;
+}
+
+.linkmain {
+  z-index: 11;
+  display: flex;
+  padding-left: 45px;
+  margin-top: 120px;
+}
+
+.link1, .link2, .link3 {
+  margin-right: 44px;
+  display: grid;
+  color: white;
+  font-size: 20px;
+  font-family: "helvetica";
+  font-weight: 10;
+  position: relative;
+}
+
+.link1::after, .link2::after, .link3::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: white;
+  width: 0;
+  transition: 0.3s;
+}
+
+.link1:hover:after {
+  width: 100%;
+}
+
+.link2:hover:after {
+  width: 100%;
+}
+
+.link3:hover:after {
+  width: 100%;
+}
+
+.maincontent {
+  display: flex; /* Разделяем на две части */
+  justify-content: space-between; /* Пространство между частями */
+  align-items: center; /* Центрируем элементы по вертикали */
+  margin: 100px 45px 0; /* Отступы сверху и по бокам */
+  gap: 20px; /* Отступ между колонками */
+}
+
+.maintext {
+  flex: 1; /* Текст занимает первую часть */
+  max-width: 50%; /* Ограничиваем ширину текста */
+}
+
+.textbig {
+  color: white;
+  font-size: 24px;
+  font-family: "helvetica";
+  font-weight: 10;
+  margin-bottom: 15px;
+}
+
+.textsmall {
+  margin-top: 15px;
+  color: white;
+  font-size: 15px;
+  font-family: "helvetica";
+  font-weight: 10;
+  line-height: 1.6;
+}
+
+.photo {
+  flex: 1; /* Фото занимает вторую часть */
+  display: flex; /* Центрирование изображения */
+  justify-content: center;
+  align-items: center;
+}
+
+.photo img {
+  max-width: 350px; /* Ограничиваем ширину изображения */
+  max-height: 350px; /* Ограничиваем высоту изображения */
+  width: 100%; /* Делаем адаптивным */
+  height: auto; /* Сохраняем пропорции */
+  border-radius: 0; /* Убираем закругление, если нужно */
+}
+
+.copyright {
+  position: fixed; /* Фиксированное положение на экране */
+  bottom: 10px; /* Отступ снизу */
+  left: 10px; /* Отступ слева */
+  font-size: 14px; /* Размер шрифта */
+  color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый текст */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 900px) {
+  .mainlogo {
+      position: fixed;
+      height: 50px;
+      left: 7px;
   }
 
-
-  @keyframes startwebdown {
-    to {
-        margin-top: -50px;
-        margin-bottom: 50px;
-    }
+  .linkmain {
+      padding-left: 20px;
+      margin-top: 80px;
+      margin-bottom: 70px;
   }
 
+  .link1, .link2, .link3 {
+      font-size: 15px;
+  }
+
+  .maincontent {
+      display: block; /* На маленьких экранах элементы располагаются вертикально */
+      margin: 20px;
+  }
+
+  .maintext {
+      max-width: 100%; /* Убираем ограничение ширины текста */
+      margin: 0 auto;
+      margin-bottom: 20px;
+  }
+
+  .textbig {
+    font-size: 19px;
+  }
+  
+  .textsmall {
+    font-size: 10px;
+  }
+
+  .photo {
+      margin: 0 auto; /* Центрируем фото */
+      text-align: center;
+  }
+
+  .photo img {
+      width: 200px; /* Уменьшаем фото на маленьких экранах */
+  }
+
+  .copyright {
+      font-size: 10px;
+  }
+}

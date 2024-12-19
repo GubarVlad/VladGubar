@@ -295,4 +295,12 @@ position: relative;
     }
   }
 
+  .copyright {
+    position: fixed; /* Фиксированное положение на экране */
+    bottom: 10px; /* Отступ снизу */
+    left: 10px; /* Отступ слева */
+    font-size: 14px; /* Размер шрифта */
+    color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый текст */
+    font-family: 'Montserrat', sans-serif;
+  }
   

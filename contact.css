@@ -182,7 +182,7 @@ max-width: 100%
 
    .link {
     font-size: 50px;
-    color: #B5B5B6;
+    color: white;
     font-family: "Cormorant", serif;
 font-weight: 400;
 font-style: normal;
@@ -294,3 +294,5 @@ position: relative;
         margin-bottom: 50px;
     }
   }
+
+  

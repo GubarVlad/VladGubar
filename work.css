@@ -1,0 +1,368 @@
+* {
+    z-index: 11;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    user-select: none;
+  }
+  
+  body {
+    background-color: black;
+    animation: start 3s;
+    user-select: none;
+  }
+  
+  @keyframes start {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+  }
+  
+  .backg {
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+  }
+  
+  .backg-overflow {
+    position: relative;
+    width: 300%;
+    height: 300%;
+    background-image: url('img/texture.png');
+    background-position: 0px 0px;
+    background-size: 396px;
+    opacity: 1;
+    animation: rt 0.5s infinite;
+    animation-timing-function: steps(4, end);
+  }
+  
+  @keyframes rt {
+    to {
+        transform: rotate(90deg);
+    }
+  }
+  
+  .mainlogo {
+    position: fixed;
+    z-index: 11;
+    width: auto;
+    height: 95px;
+    top: 9px;
+    left: 25px;
+  }
+  
+  .linkmain {
+    z-index: 11;
+    display: flex;
+    padding-left: 45px;
+    margin-top: 120px;
+  }
+  
+  .link1, .link2, .link3 {
+    margin-right: 44px;
+    display: grid;
+    color: white;
+    font-size: 20px;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 10;
+    position: relative;
+  }
+  
+  .link1::after, .link2::after, .link3::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: white;
+    width: 0;
+    transition: 0.3s;
+  }
+  
+  .link1:hover:after {
+    width: 100%;
+  }
+  
+  .link2:hover:after {
+    width: 100%;
+  }
+  
+  .link3:hover:after {
+    width: 100%;
+  }
+  
+  .maincontent {
+    display: flex; /* Разделяем на две части */
+    justify-content: space-between; /* Пространство между частями */
+    align-items: center; /* Центрируем элементы по вертикали */
+    margin: 100px 45px 0; /* Отступы сверху и по бокам */
+    gap: 20px; /* Отступ между колонками */
+  }
+  
+  .maintext {
+    flex: 1; /* Текст занимает первую часть */
+    max-width: 50%; /* Ограничиваем ширину текста */
+  }
+  
+  .textbig {
+    color: white;
+    font-size: 24px;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 10;
+    margin-bottom: 15px;
+  }
+  
+  .textsmall {
+    margin-top: 15px;
+    color: white;
+    font-size: 15px;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 10;
+    line-height: 1.6;
+  }
+  
+  .photo {
+    display: flex; /* Используем Flexbox */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    flex: 1; /* Делаем колонку равной по размеру тексту */
+    z-index: 10;
+}
+
+.photo img {
+    max-width: 70%; /* Ограничиваем ширину картинки */
+    max-height: 70%; /* Ограничиваем высоту картинки */
+    width: auto; /* Пропорциональная ширина */
+    height: auto; /* Пропорциональная высота */
+}
+  .copyright {
+    position: fixed; /* Фиксированное положение на экране */
+    bottom: 10px; /* Отступ снизу */
+    left: 10px; /* Отступ слева */
+    font-size: 14px; /* Размер шрифта */
+    color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый текст */
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Гирлянда */
+  
+  .lightrope {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    margin: -2px 0 0 0;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
+  }
+  
+  .lightrope li {
+    position: relative;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    display: block;
+    width: 12px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 20px;
+    display: inline-block;
+    background: #555; /* Тёмно-серый цвет */
+    box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.5); /* Уменьшено свечение */
+    -webkit-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  }
+  
+  .lightrope li:nth-child(2n+1) {
+    background: #666; /* Более светлый оттенок серого */
+    box-shadow: 0px 4px 12px 2px rgba(102, 102, 102, 0.5);
+    -webkit-animation-duration: 1.8s;
+    animation-duration: 1.8s;
+  }
+  
+  .lightrope li:nth-child(4n+2) {
+    background: #333; /* Более тёмный оттенок серого */
+    box-shadow: 0px 4px 12px 2px rgba(51, 51, 51, 0.5);
+    -webkit-animation-duration: 2.2s;
+    animation-duration: 2.2s;
+  }
+  
+  .lightrope li:nth-child(odd) {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  }
+  
+  .lightrope li:nth-child(3n+1) {
+    -webkit-animation-duration: 1.6s;
+    animation-duration: 1.6s;
+  }
+  
+  .lightrope li:before {
+    content: "";
+    position: absolute;
+    background: #222; /* Тёмный цвет крепления */
+    width: 10px;
+    height: 9px;
+    border-radius: 3px;
+    top: -3px;
+    left: 1px;
+  }
+  
+  .lightrope li:after {
+    content: "";
+    top: -14px;
+    left: 9px;
+    position: absolute;
+    width: 52px;
+    height: 18px;
+    border-bottom: solid #222 2px;
+    border-radius: 50%;
+  }
+  
+  .lightrope li:last-child:after {
+    content: none;
+  }
+  
+  .lightrope li:first-child {
+    margin-left: -40px;
+  }
+  
+  @-webkit-keyframes fade {
+    0%, 100% {
+      background: #555;
+      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.5);
+    }
+    50% {
+      background: rgba(85, 85, 85, 0.3);
+      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.2);
+    }
+  }
+  
+  @keyframes fade {
+    0%, 100% {
+      background: #555;
+      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.5);
+    }
+    50% {
+      background: rgba(85, 85, 85, 0.3);
+      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.2);
+    }
+  }
+  
+  /* Адаптация для маленьких экранов */
+  @media (max-width: 900px) {
+    .mainlogo {
+        position: fixed;
+        height: 50px;
+        left: 7px;
+    }
+  
+    .linkmain {
+        padding-left: 20px;
+        margin-top: 80px;
+        margin-bottom: 70px;
+    }
+  
+    .link1, .link2, .link3 {
+        font-size: 15px;
+    }
+  
+    .maincontent {
+        display: block; /* На маленьких экранах элементы располагаются вертикально */
+        margin: 20px;
+    }
+  
+    .maintext {
+        max-width: 100%; /* Убираем ограничение ширины текста */
+        margin: 0 auto;
+        margin-bottom: 70px;
+        margin-top: 100px;
+        align-items: center;
+        justify-content: right;
+        text-align: center;
+    }
+  
+    .textbig {
+      font-size: 20px;
+    }
+    
+    .textsmall {
+      font-size: 12px;
+    }
+  
+    .photo {
+        margin: 0 auto; /* Центрируем фото */
+        text-align: center;
+    }
+  
+    .photo img {
+        width: 200px; /* Уменьшаем фото на маленьких экранах */
+    }
+  
+    .copyright {
+        font-size: 10px;
+    }
+  
+    .lightrope {
+      margin-top: -80px;
+    }
+  
+  }
+  
+  @media (max-width: 900px) {
+    .maincontent {
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        align-items: center; /* Центрирование */
+    }
+
+    .maintext, .photo {
+        margin: 20px 0; /* Добавляем отступы между элементами */
+    }
+
+    .maintext {
+        order: 2; /* Меняем порядок, чтобы текст был под картинкой */
+        text-align: center; /* Центрирование текста */
+    }
+
+    .photo {
+        order: 1; /* Картинка сверху */
+    }
+
+    .photo img {
+    width: 80%; /* Сужаем изображение для мобильных */
+    max-width: 90%; /* Ограничиваем ширину картинки */
+    max-height: 790%; /* Ограничиваем высоту картинки */
+    width: auto; /* Пропорциональная ширина */
+    height: auto; /* Пропорциональная высота */
+    }
+}
+
+.photo a {
+    display: flex; /* Используем Flexbox для центрирования */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    width: 100%; /* Занимаем всю ширину контейнера */
+    height: 100%; /* Занимаем всю высоту контейнера */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+}

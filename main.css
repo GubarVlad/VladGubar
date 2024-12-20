@@ -113,11 +113,10 @@ to {
 }
 
 .maincontent {
-  margin-top: 30px;
   display: flex; /* Разделяем на две части */
   justify-content: space-between; /* Пространство между частями */
   align-items: center; /* Центрируем элементы по вертикали */
-  margin: 100px 45px 0; /* Отступы сверху и по бокам */
+  margin: 180px 45px 0; /* Отступы сверху и по бокам */
   gap: 20px; /* Отступ между колонками */
 }
 
@@ -292,8 +291,9 @@ to {
 
   .linkmain {
       padding-left: 20px;
-      margin-top: 80px;
-      margin-bottom: 70px;
+      margin-top: 70px;
+      margin-bottom: 80px;
+
   }
 
   .link1, .link2, .link3 {
@@ -326,6 +326,7 @@ to {
   .photo {
       margin: 0 auto; /* Центрируем фото */
       text-align: center;
+      margin-bottom: 80px;
   }
 
   .photo img {

@@ -23,25 +23,14 @@
   
   .backg {
     position: fixed;
-    z-index: 10;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    z-index: 9;
     display: flex;
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    opacity: 0.3;
+    opacity: 0.5;
   }
-
+  
   .backg-overflow {
     position: relative;
     width: 300%;
@@ -53,11 +42,11 @@
     animation: rt 0.5s infinite;
     animation-timing-function: steps(4, end);
   }
-
+  
   @keyframes rt {
-  to {
-    transform : rotate(90deg);
-  }
+    to {
+        transform: rotate(90deg);
+    }
   }
   
   .mainlogo {
@@ -290,8 +279,8 @@
   
     .linkmain {
         padding-left: 20px;
-        margin-top: 80px;
-        margin-bottom: 70px;
+        margin-top: 70px;
+        margin-bottom: 80px;
     }
   
     .link1, .link2, .link3 {

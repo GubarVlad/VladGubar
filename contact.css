@@ -17,16 +17,64 @@ body {
     100% {opacity: 100;}
 }
 
+.mainlogo {
+  position: fixed;
+  z-index: 11;
+  width: auto;
+  height: 95px;
+  top: 9px;
+  left: 25px;
+}
+
+.linkmain {
+  z-index: 10;
+  display: flex;
+  padding-left: 45px;
+  margin-top: 120px;
+}
+
+.link1, .link2, .link3 {
+  margin-right: 44px;
+  display: grid;
+  color: white;
+  font-size: 20px;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 10;
+  position: relative;
+  z-index: 10;
+}
+
+.link1::after, .link2::after, .link3::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: white;
+  width: 0;
+  transition: 0.3s;
+}
+
+.link1:hover:after {
+  width: 100%;
+}
+
+.link2:hover:after {
+  width: 100%;
+}
+
+.link3:hover:after {
+  width: 100%;
+}
+
+
 .head {
     margin-top: 30px;
     padding-left: 50px;
 display: flex;
-}
-
-.logo {
-width: 28px;
-height: 28px;
-padding-right: 3cap;
 }
 
 .headtext0 {
@@ -224,6 +272,10 @@ position: relative;
 
    @media (max-width: 900px) {
    
+.main {
+  margin-top: 30px;
+}
+
     .name {
         font-size: 60px;
         
@@ -253,8 +305,8 @@ position: relative;
 
 .linkmain {
     padding-left: 20px;
-    margin-top: 80px;
-    margin-bottom: 70px;
+    margin-top: 70px;
+    margin-bottom: 5px;
 }
 
 .link1, .link2, .link3 {
@@ -270,7 +322,7 @@ position: relative;
 
    .backg {
     position: fixed;
-    z-index: 10;
+    z-index: 9;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

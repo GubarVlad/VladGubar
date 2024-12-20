@@ -222,7 +222,7 @@ position: relative;
 
   
 
-   @media (max-width: 768px) {
+   @media (max-width: 900px) {
    
     .name {
         font-size: 60px;
@@ -244,6 +244,26 @@ position: relative;
 .head {
     opacity: 0;
 }
+
+.mainlogo {
+    position: fixed;
+    height: 50px;
+    left: 7px;
+}
+
+.linkmain {
+    padding-left: 20px;
+    margin-top: 80px;
+    margin-bottom: 70px;
+}
+
+.link1, .link2, .link3 {
+    font-size: 15px;
+}
+
+.lightrope {
+    margin-top: -80px;
+  }
 
    }
 
@@ -304,3 +324,115 @@ position: relative;
     font-family: 'Montserrat', sans-serif;
   }
   
+  /* Гирлянда */
+
+.lightrope {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    margin: -2px 0 0 0;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
+  }
+  
+  .lightrope li {
+    position: relative;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    display: block;
+    width: 12px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 20px;
+    display: inline-block;
+    background: #555; /* Тёмно-серый цвет */
+    box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.5); /* Уменьшено свечение */
+    -webkit-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  }
+  
+  .lightrope li:nth-child(2n+1) {
+    background: #666; /* Более светлый оттенок серого */
+    box-shadow: 0px 4px 12px 2px rgba(102, 102, 102, 0.5);
+    -webkit-animation-duration: 1.8s;
+    animation-duration: 1.8s;
+  }
+  
+  .lightrope li:nth-child(4n+2) {
+    background: #333; /* Более тёмный оттенок серого */
+    box-shadow: 0px 4px 12px 2px rgba(51, 51, 51, 0.5);
+    -webkit-animation-duration: 2.2s;
+    animation-duration: 2.2s;
+  }
+  
+  .lightrope li:nth-child(odd) {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  }
+  
+  .lightrope li:nth-child(3n+1) {
+    -webkit-animation-duration: 1.6s;
+    animation-duration: 1.6s;
+  }
+  
+  .lightrope li:before {
+    content: "";
+    position: absolute;
+    background: #222; /* Тёмный цвет крепления */
+    width: 10px;
+    height: 9px;
+    border-radius: 3px;
+    top: -3px;
+    left: 1px;
+  }
+  
+  .lightrope li:after {
+    content: "";
+    top: -14px;
+    left: 9px;
+    position: absolute;
+    width: 52px;
+    height: 18px;
+    border-bottom: solid #222 2px;
+    border-radius: 50%;
+  }
+  
+  .lightrope li:last-child:after {
+    content: none;
+  }
+  
+  .lightrope li:first-child {
+    margin-left: -40px;
+  }
+  
+  @-webkit-keyframes fade {
+    0%, 100% {
+      background: #555;
+      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.5);
+    }
+    50% {
+      background: rgba(85, 85, 85, 0.3);
+      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.2);
+    }
+  }
+  
+  @keyframes fade {
+    0%, 100% {
+      background: #555;
+      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.5);
+    }
+    50% {
+      background: rgba(85, 85, 85, 0.3);
+      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.2);
+    }
+  }

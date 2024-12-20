@@ -113,6 +113,7 @@ to {
 }
 
 .maincontent {
+  margin-top: 30px;
   display: flex; /* Разделяем на две части */
   justify-content: space-between; /* Пространство между частями */
   align-items: center; /* Центрируем элементы по вертикали */

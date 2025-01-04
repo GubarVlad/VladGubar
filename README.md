@@ -5,4 +5,6 @@ VERSION
 
 0.0.2
 
-happy new year 
+happy new year !
+
+Time to say goodbye 

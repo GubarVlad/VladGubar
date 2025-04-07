@@ -27,10 +27,13 @@ body {
 }
 
 .linkmain {
-  z-index: 10;
+  position: fixed; /* Фиксируем меню */
+  top: 120px; /* Сохраняем прежний отступ сверху */
+  left: 45px; /* Сохраняем отступ слева */
+  z-index: 11; /* Поверх других элементов */
   display: flex;
-  padding-left: 45px;
-  margin-top: 120px;
+  padding-left: 0; /* Убираем избыточный отступ */
+  margin: 0; /* Убираем лишние отступы */
 }
 
 .link1, .link2, .link3 {
@@ -109,6 +112,9 @@ z-index: 11;
   z-index: 11;
 }
 
+.main {
+  margin-top: 110px;
+}
 
 .face {
     position: relative;
@@ -172,9 +178,6 @@ text-align: center;
 position: absolute;
 max-width: 100%
     }
-
-
-
 
     .name {
         margin: 0;
@@ -268,12 +271,22 @@ text-align: center;
 position: relative;
    }
 
-  
+   .copyright {
+    position: fixed; /* Фиксированное положение на экране */
+    bottom: 10px; /* Отступ снизу */
+    left: 10px; /* Отступ слева */
+    font-size: 14px; /* Размер шрифта */
+    color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый текст */
+    font-family: 'Montserrat', sans-serif; }
 
    @media (max-width: 900px) {
    
+    .copyright {
+      font-size: 10px;
+  }
+
 .main {
-  margin-top: 30px;
+  margin-top: 90px;
 }
 
     .name {
@@ -304,19 +317,16 @@ position: relative;
 }
 
 .linkmain {
-    padding-left: 20px;
-    margin-top: 70px;
-    margin-bottom: 5px;
+  top: 70px; /* Снижаем отступ для маленьких экранов */
+  left: 20px; /* Уменьшаем отступ слева */
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 80px;
 }
 
 .link1, .link2, .link3 {
     font-size: 15px;
 }
-
-.lightrope {
-    margin-top: -80px;
-  }
-
    }
 
 
@@ -367,124 +377,8 @@ position: relative;
     }
   }
 
-  .copyright {
-    position: fixed; /* Фиксированное положение на экране */
-    bottom: 10px; /* Отступ снизу */
-    left: 10px; /* Отступ слева */
-    font-size: 14px; /* Размер шрифта */
-    color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый текст */
-    font-family: 'Montserrat', sans-serif;
-  }
   
-  /* Гирлянда */
-
-.lightrope {
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    position: absolute;
-    z-index: 1;
-    margin: -2px 0 0 0;
-    padding: 0;
-    pointer-events: none;
-    width: 100%;
-  }
   
-  .lightrope li {
-    position: relative;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    list-style: none;
-    margin: 10px;
-    padding: 0;
-    display: block;
-    width: 12px;
-    height: 24px;
-    border-radius: 50%;
-    margin: 20px;
-    display: inline-block;
-    background: #555; /* Тёмно-серый цвет */
-    box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.5); /* Уменьшено свечение */
-    -webkit-animation-name: fade;
-    animation-name: fade;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-  }
   
-  .lightrope li:nth-child(2n+1) {
-    background: #666; /* Более светлый оттенок серого */
-    box-shadow: 0px 4px 12px 2px rgba(102, 102, 102, 0.5);
-    -webkit-animation-duration: 1.8s;
-    animation-duration: 1.8s;
-  }
   
-  .lightrope li:nth-child(4n+2) {
-    background: #333; /* Более тёмный оттенок серого */
-    box-shadow: 0px 4px 12px 2px rgba(51, 51, 51, 0.5);
-    -webkit-animation-duration: 2.2s;
-    animation-duration: 2.2s;
-  }
   
-  .lightrope li:nth-child(odd) {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-  }
-  
-  .lightrope li:nth-child(3n+1) {
-    -webkit-animation-duration: 1.6s;
-    animation-duration: 1.6s;
-  }
-  
-  .lightrope li:before {
-    content: "";
-    position: absolute;
-    background: #222; /* Тёмный цвет крепления */
-    width: 10px;
-    height: 9px;
-    border-radius: 3px;
-    top: -3px;
-    left: 1px;
-  }
-  
-  .lightrope li:after {
-    content: "";
-    top: -14px;
-    left: 9px;
-    position: absolute;
-    width: 52px;
-    height: 18px;
-    border-bottom: solid #222 2px;
-    border-radius: 50%;
-  }
-  
-  .lightrope li:last-child:after {
-    content: none;
-  }
-  
-  .lightrope li:first-child {
-    margin-left: -40px;
-  }
-  
-  @-webkit-keyframes fade {
-    0%, 100% {
-      background: #555;
-      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.5);
-    }
-    50% {
-      background: rgba(85, 85, 85, 0.3);
-      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.2);
-    }
-  }
-  
-  @keyframes fade {
-    0%, 100% {
-      background: #555;
-      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.5);
-    }
-    50% {
-      background: rgba(85, 85, 85, 0.3);
-      box-shadow: 0px 4px 12px 2px rgba(85, 85, 85, 0.2);
-    }
-  }

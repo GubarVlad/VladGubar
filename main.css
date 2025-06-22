@@ -535,6 +535,7 @@ body {
   display: block;
   padding-top: 100px;
   width: 40%;
+  z-index: 0;
 }
 
 .flower-and-text {

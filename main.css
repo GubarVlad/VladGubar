@@ -333,31 +333,31 @@ img.photo {
   margin-top: 0;
 }
 
-.block-3 a.header-1 {
+.block-3 a.header-3 {
   position: relative;
 }
 
-.block-3 a.header-1::before,
-.block-3 a.header-1::after {
+.block-3 a.header-3::before,
+.block-3 a.header-3::after {
   position: absolute;
   opacity: 0;
   transition: all 0.3s ease;
 }
 
-.block-3 a.header-1::before {
+.block-3 a.header-3::before {
   content: "[";
   right: 100%;
   transform: translateX(10px);
 }
 
-.block-3 a.header-1::after {
+.block-3 a.header-3::after {
   content: "]";
   left: 100%;
   transform: translateX(-10px);
 }
 
-.block-3 a.header-1:hover::before,
-.block-3 a.header-1:hover::after {
+.block-3 a.header-3:hover::before,
+.block-3 a.header-3:hover::after {
   opacity: 1;
   transform: translateX(0);
 }
@@ -367,6 +367,15 @@ img.photo {
   font-family: "Helvetica", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
+  margin-bottom: 15px;
+  color: #1A1A1A;
+}
+
+.header-3 {
+  font-size: clamp(36px, 5.5vw + 1rem, 90px);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
   margin-bottom: 15px;
   color: #1A1A1A;
 }

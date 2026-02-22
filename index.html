@@ -1,121 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vlad Gubar</title>
-
-    <!-- Подключение стилей -->
-    <link rel="stylesheet" type="text/css" href="main.css">
-
-    <!-- Шрифты -->
+    <meta name="description" content="Сканируйте отходы, зарабатывайте баллы и делайте мир чище. EcoFriend - приложение для экологичной жизни.">
+    <title>EcoFriend - Сделаем мир чище вместе</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-
-    <!-- Иконка сайта -->
-    <link rel="shortcut icon" href="img/logo.svg">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.svg">
-
-    <!-- Светлая тема в Safari -->
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<!-- Фон -->
-<div class="backg">
-    <div class="backg-overflow"></div>
-</div>
-
 <body>
-
-    <!-- Логотип -->
-    <div class="logo-wrapper">
-        <img src="img/VLADGUBAR.svg" class="mainlogo mainlogo-light" alt="Vlad Gubar Logo">
-        <img src="img/VLADGUBAR-DARK.svg" class="mainlogo mainlogo-dark" alt="Vlad Gubar Logo">
-    </div>
-    <div class="sm">Winter '26</div>
-
-    <!-- Меню -->
-    <nav id="link" class="linkmain">
-        <a href="index.html" class="link1" aria-details="Open about page">[about]</a>
-        <a href="contact.html" class="link2" aria-details="Write to Vlad Gubar">contact</a>
-        <a href="work.html" class="link3" aria-details="Open work page">work</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🌱</span>
+                <span class="brand-name">EcoFriend</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Возможности</a>
+                <a href="#how-it-works">Как это работает</a>
+                <a href="#screens">Скриншоты</a>
+            </div>
+            <a href="https://eco.vladgubar.website" class="nav-btn">Начать</a>
+        </div>
     </nav>
 
-    <div class="page">
-
-        <div class="image-wrapper-face">
-            <img src="img/face.svg" alt="face" class="face">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Сканируйте отходы, зарабатывайте баллы и делайте мир чище
+                </h1>
+                <p class="hero-description">
+                    EcoFriend — это приложение, которое превращает экологичные привычки в награды. 
+                    Сканируйте упаковку, узнавайте как правильно утилизировать отходы и получайте баллы.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://eco.vladgubar.website" class="btn btn-primary btn-lg">Начать прямо сейчас</a>
+                    <a href="portfolio.html" class="btn btn-secondary btn-lg">Перейти к портфолио</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/phone/iMockup - iPhone 15 Pro Max.png" alt="EcoFriend приложение" class="phone-mockup">
+            </div>
         </div>
+    </section>
 
-        <div class="block-1">
-            <h1 class="header-1">PORTFOLIO</h1>
-            <h2 class="text-1">Digital design & development
-                Focused on clarity, structure, and aesthetics.</h2>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-container">
+            <h2 class="section-title">Почему EcoFriend?</h2>
+            <p class="section-subtitle">Простые инструменты для экологичной жизни</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3 class="feature-title">Сканирование отходов</h3>
+                    <p class="feature-description">
+                        Сфотографируйте упаковку и мгновенно узнайте, как правильно её утилизировать
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Система баллов</h3>
+                    <p class="feature-description">
+                        Зарабатывайте баллы за экологичные действия и обменивайте их на награды
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Отслеживание прогресса</h3>
+                    <p class="feature-description">
+                        Следите за своим вкладом в экологию и смотрите статистику утилизации
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">Экологическое сообщество</h3>
+                    <p class="feature-description">
+                        Присоединяйтесь к тысячам людей, которые заботятся о планете
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">Таблица лидеров</h3>
+                    <p class="feature-description">
+                        Соревнуйтесь с друзьями и поднимайтесь в рейтинге самых активных экологов
+                    </p>
+                </div>
+
+            </div>
         </div>
+    </section>
 
-        <div class="block-2">
-            <h1 class="header-1">ABOUT</h1>
-            <h2 class="text-1">I am a designer and developer
-                working with the web as a spatial medium.</h2>
-            <h2 class="text-1-italic">I focus on projects that feel clear on the inside and calm on the outside.</h2>
-            <h2 class="text-1-italic">Clean layouts. Thoughtful typography. Intentional decisions.</h2>
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="section-container">
+            <h2 class="section-title">Как это работает</h2>
+            <p class="section-subtitle">Три простых шага к экологичной жизни</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Сканируйте</h3>
+                        <p class="step-description">
+                            Сфотографируйте упаковку товара или отсканируйте штрих-код в приложении
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Узнайте</h3>
+                        <p class="step-description">
+                            Получите информацию о материале упаковки и способах её утилизации
+                        </p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Зарабатывайте</h3>
+                        <p class="step-description">
+                            Получайте баллы за правильную утилизацию и обменивайте их в магазине
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="block-1">
-            <h1 class="text-2-italic">Every project starts with a simple question: why. I look for balance between form
-                and function, <br> aesthetics and usability. No unnecessary gestures. Only what matters.</h1>
+    <!-- Screenshots Section -->
+    <section id="screens" class="screenshots">
+        <div class="section-container">
+            <h2 class="section-title">Посмотрите на приложение</h2>
+            <p class="section-subtitle">Современный и удобный интерфейс</p>
+            
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="img/phone/iMockup - iPhone 15 Pro Max.png" alt="Главный экран" class="screenshot-img">
+                    <p class="screenshot-label">Статистика</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="img/phone/iMockup - iPhone 15 Pro Max-1.png" alt="Сканирование" class="screenshot-img">
+                    <p class="screenshot-label">Меню профиля</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="img/phone/iMockup - iPhone 15 Pro Max-3.png" alt="Информация" class="screenshot-img">
+                    <p class="screenshot-label">Магазин наград</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="img/phone/iMockup - iPhone 15 Pro Max-4.png" alt="Профиль" class="screenshot-img">
+                    <p class="screenshot-label">Ваш профиль и достижения</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="image-wrapper-shoulders">
-            <img src="img/shoulders.svg" alt="shoulders" class="shoulders">
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-container">
+            <h2 class="cta-title">Присоединяйтесь к экологичному движению</h2>
+            <p class="cta-description">
+                Начните делать мир чище уже сегодня. Скачайте приложение и получите приветственный бонус!
+            </p>
         </div>
+    </section>
 
-        <div class="block-1">
-            <h1 class="header-1">WHAT I DO</h1>
-            <h2 class="text-1">Web Design <br>
-                UI / UX Systems <br>
-                Frontend Development <br>
-                Visual Concepts <br>
-                Creative Experiments <br> <br>
-
-                From concept to final implementation.</h2>
-        </div>
-
-        <div class="block-1">
-            <h1 class="header-1">PERSPECTIVE</h1>
-            <h2 class="text-1">Design is a dialogue between space and content.</h2>
-        </div>
-
-        <h2 class="text-2">Silence is part of the composition. So is restraint.</h2>
-
-        <div class="image-wrapper-lips">
-            <img src="img/lips.svg" alt="lips" class="lips">
-        </div>
-
-    </div>
-
-    <a href="Terms.html" class="corner-link">Terms of Use & Privacy Policy</a>
-
-    </div>
-
-    <!-- Копирайт -->
-    <footer>
-        <div class="copyright">
-            © 2026 Vlad Gubar, All rights reserved
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="brand-icon">🌱</span>
+            </div>
+            <p class="footer-text">Делаем мир чище вместе</p>
+            <p class="footer-copyright">&copy; 2026 EcoFriend. Все права защищены.</p>
         </div>
     </footer>
 
-
-    <script src="mine.js"></script>
+    <script src="main-eco.js"></script>
 </body>
-
 </html>

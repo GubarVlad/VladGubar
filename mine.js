@@ -1,55 +1,31 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const fixedElements = [
-    { el: document.querySelector(".logo-wrapper"), type: "logo" },
-    { el: document.querySelector(".sm"), type: "text" },
-    { el: document.querySelector(".link1"), type: "text" },
-    { el: document.querySelector(".link2"), type: "text" },
-    { el: document.querySelector(".link3"), type: "text" },
-    { el: document.querySelector(".corner-link"), type: "text" },
-    { el: document.querySelector(".copyright"), type: "text" },
-  ];
+const logo = document.querySelector('.mainlogo');
+const faceImg = document.querySelector('.image-wrapper-face img');
 
-  const darkSections = [
-    document.querySelector(".image-wrapper-face"),
-    document.querySelector(".image-wrapper-lips"),
-  ];
+// Получаем верх логотипа относительно документа
+function getLogoBottom() {
+  const rect = logo.getBoundingClientRect();
+  return rect.bottom + window.scrollY; // bottom логотипа относительно документа
+}
 
-  function checkOverlap() {
-    fixedElements.forEach((item) => {
-      if (!item.el) return;
+// Проверка пересечения логотипа с картинкой
+function updateLogo() {
+  const rectImg = faceImg.getBoundingClientRect();
+  const imgTop = rectImg.top + window.scrollY;
+  const imgBottom = rectImg.bottom + window.scrollY;
+  const logoBottom = getLogoBottom();
 
-      const rect = item.el.getBoundingClientRect();
-      // Skip if element is hidden
-      if (rect.width === 0 && rect.height === 0) return;
-
-      const elementCenterY = rect.top + rect.height / 2;
-      const elementCenterX = rect.left + rect.width / 2;
-
-      let isOverlapping = false;
-
-      darkSections.forEach((section) => {
-        if (!section) return;
-        const sectionRect = section.getBoundingClientRect();
-
-        if (
-          elementCenterY >= sectionRect.top &&
-          elementCenterY <= sectionRect.bottom &&
-          elementCenterX >= sectionRect.left &&
-          elementCenterX <= sectionRect.right
-        ) {
-          isOverlapping = true;
-        }
-      });
-
-      if (isOverlapping) {
-        item.el.classList.add("white-mode");
-      } else {
-        item.el.classList.remove("white-mode");
-      }
-    });
+  // Меняем логотип только если его низ пересек верх картинки
+  if (logoBottom >= imgTop && logoBottom <= imgBottom) {
+    logo.src = 'img/VLADGUBAR-DARK.svg';
+  } else {
+    logo.src = 'img/VLADGUBAR.svg';
   }
+}
 
-  window.addEventListener("scroll", checkOverlap);
-  window.addEventListener("resize", checkOverlap);
-  checkOverlap();
-});
+// Проверка при загрузке
+updateLogo();
+
+// При скролле и ресайзе
+window.addEventListener('scroll', updateLogo);
+window.addEventListener('resize', updateLogo);
+

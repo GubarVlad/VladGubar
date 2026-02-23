@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("https://fontsforyou.com/fonts/h/Helvetica.ttf");
+}
+
 * {
   z-index: 11;
   padding: 0;
@@ -14,10 +19,10 @@ body {
 
 @keyframes start {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 100;
+    opacity: 100;
   }
 }
 
@@ -35,36 +40,31 @@ body {
 
   background-image: linear-gradient(
     to right,
-    
-    /* Первая пара линий (левая) */
-    transparent 0,
-    transparent calc(16.66% - 6px),    /* до первой линии */
-    rgba(0,0,0,0.2) calc(16.66% - 6px),
-    rgba(0,0,0,0.2) calc(16.66% - 5px), /* линия 1px */
-    transparent calc(16.66% - 5px),
-    transparent calc(16.66% + 4px),     /* промежуток между линиями */
-    rgba(0,0,0,0.2) calc(16.66% + 4px),
-    rgba(0,0,0,0.2) calc(16.66% + 5px),
-    transparent calc(16.66% + 5px),
 
-    /* Вторая пара линий (центр) */
-    transparent calc(50% - 6px),
-    rgba(0,0,0,0.2) calc(50% - 6px),
-    rgba(0,0,0,0.2) calc(50% - 5px),
+    /* Первая пара линий (левая) */ transparent 0,
+    transparent calc(16.66% - 6px),
+    /* до первой линии */ rgba(0, 0, 0, 0.2) calc(16.66% - 6px),
+    rgba(0, 0, 0, 0.2) calc(16.66% - 5px),
+    /* линия 1px */ transparent calc(16.66% - 5px),
+    transparent calc(16.66% + 4px),
+    /* промежуток между линиями */ rgba(0, 0, 0, 0.2) calc(16.66% + 4px),
+    rgba(0, 0, 0, 0.2) calc(16.66% + 5px),
+    transparent calc(16.66% + 5px),
+    /* Вторая пара линий (центр) */ transparent calc(50% - 6px),
+    rgba(0, 0, 0, 0.2) calc(50% - 6px),
+    rgba(0, 0, 0, 0.2) calc(50% - 5px),
     transparent calc(50% - 5px),
     transparent calc(50% + 4px),
-    rgba(0,0,0,0.2) calc(50% + 4px),
-    rgba(0,0,0,0.2) calc(50% + 5px),
+    rgba(0, 0, 0, 0.2) calc(50% + 4px),
+    rgba(0, 0, 0, 0.2) calc(50% + 5px),
     transparent calc(50% + 5px),
-
-    /* Третья пара линий (правая) */
-    transparent calc(83.33% - 6px),
-    rgba(0,0,0,0.2) calc(83.33% - 6px),
-    rgba(0,0,0,0.2) calc(83.33% - 5px),
+    /* Третья пара линий (правая) */ transparent calc(83.33% - 6px),
+    rgba(0, 0, 0, 0.2) calc(83.33% - 6px),
+    rgba(0, 0, 0, 0.2) calc(83.33% - 5px),
     transparent calc(83.33% - 5px),
     transparent calc(83.33% + 4px),
-    rgba(0,0,0,0.2) calc(83.33% + 4px),
-    rgba(0,0,0,0.2) calc(83.33% + 5px),
+    rgba(0, 0, 0, 0.2) calc(83.33% + 4px),
+    rgba(0, 0, 0, 0.2) calc(83.33% + 5px),
     transparent calc(83.33% + 5px)
   );
 }
@@ -94,18 +94,18 @@ body {
   margin-right: 44px;
   display: grid;
   color: black;
-  font-size: 15px;
-  font-family: "Inter", serif;
+  font-size: clamp(12px, 1.3vw, 14px);
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 10;
+  font-weight: 100;
   position: relative;
   position: absolute;
   top: 0;
   right: -10px;
   color: #666;
   transform: translateY(100%);
+  transition: color 0.3s ease;
 }
-
 
 .logo-wrapper {
   position: fixed;
@@ -121,7 +121,7 @@ body {
   top: 0;
   left: 0;
   height: 95px;
-  transition: opacity 2.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 .mainlogo-light {
@@ -132,33 +132,46 @@ body {
 .mainlogo-dark {
   opacity: 0;
   z-index: 2;
-  pointer-events: none; /* чтобы не блокировал клики */
+  pointer-events: none; 
+}
+
+.logo-wrapper.white-mode .mainlogo-light {
+  opacity: 0;
+}
+
+.logo-wrapper.white-mode .mainlogo-dark {
+  opacity: 1;
 }
 
 .linkmain {
-  position: fixed; /* Фиксируем меню */
-  top: 120px; /* Сохраняем прежний отступ сверху */
-  left: 45px; /* Сохраняем отступ слева */
-  z-index: 20; /* Поверх других элементов */
+  position: fixed; 
+  top: 120px;
+  left: 45px; 
+  z-index: 20; 
   display: flex;
-  padding-left: 0; /* Убираем избыточный отступ */
-  margin: 0; /* Убираем лишние отступы */
+  padding-left: 0; 
+  margin: 0;
 }
 
-.link1, .link2, .link3 {
+.link1,
+.link2,
+.link3 {
   margin-right: 44px;
   display: grid;
   color: black;
-  font-size: 20px;
-  font-family: "Inter", serif;
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 10;
+  font-weight: 100;
   position: relative;
+  transition: color 0.3s ease;
 }
 
-.link1::after, .link2::after, .link3::after {
+.link1::after,
+.link2::after,
+.link3::after {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   bottom: 0;
   display: block;
@@ -181,120 +194,234 @@ body {
   width: 100%;
 }
 
+.link1.white-mode,
+.link2.white-mode,
+.link3.white-mode,
+.sm.white-mode,
+.corner-link.white-mode,
+.copyright.white-mode {
+  color: white !important;
+}
+
+.link1.white-mode::after,
+.link2.white-mode::after,
+.link3.white-mode::after {
+  background: white;
+}
+
+.maincontent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+div.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  z-index: 10;
+  padding-left: 17.66%;
+  padding-right: 8px;
+}
+
+img.photo {
+  width: 100%;
+}
+
 .page {
-  padding-top: clamp(120px, 30vh, 365px);
+  padding-top: 200px;
 }
 
 .image-wrapper-face {
+  position: relative;
   z-index: 10;
   width: 100%;
-  height: 350px;      
-  overflow: hidden;   
+  height: 350px;
+  overflow: hidden;
 }
 
 .image-wrapper-face img {
   z-index: 10;
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* масштаб + обрезка */
-  display: block;     /* убирает зазоры */
+  object-fit: cover; 
+  display: block; 
 }
 
 .image-wrapper-shoulders {
   z-index: 10;
   position: relative;
-  width: 100%;       /* весь экран */
-  height: 238px;     /* или любой нужный блок по высоте */
-  overflow: hidden;  /* обрезает лишнее */
+  width: 100%; 
+  height: 238px; 
+  overflow: hidden; 
 }
 
 .image-wrapper-shoulders img {
   position: absolute;
   top: 0;
-  right: 0;           /* прижимаем к правому краю */
-  width: 83%;         /* занимает 75% ширины, оставляя слева 25% пустого пространства */
-  height: 100%;       /* растягиваем по высоте контейнера */
-  object-fit: cover;  /* адаптация и обрезка картинки по размеру */
+  right: 0; 
+  width: 83%; 
+  height: 100%; 
+  object-fit: cover;
 }
 
 .image-wrapper-lips {
+  z-index: 10;
+  position: relative;
   margin-top: 20%;
   z-index: 10;
   width: 100%;
-  height: 443px;      
-  overflow: hidden;   
+  height: 443px;
+  overflow: hidden;
 }
 
 .image-wrapper-lips img {
   z-index: 10;
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* масштаб + обрезка */
-  display: block;     /* убирает зазоры */
+  object-fit: cover; 
+  display: block; 
 }
 
 .block-1 {
-  padding-left: clamp(120px, 33vw, 250px); /* отступ слева адаптивно, максимум 220px */
-  margin-bottom: 100px; /* оставляем снизу */
-  margin-top: 50px;     /* небольшой отступ сверху */
+  padding-left: 17%; 
+  padding-right: 16.66%;
+  margin-bottom: 100px;
+  margin-top: 50px; 
 }
 
 .block-2 {
-  padding-left: clamp(120px, 75vw, 730px); /* отступ слева адаптивно, максимум 220px */
-  margin-bottom: 100px; /* оставляем снизу */
-  margin-top: 50px;     /* небольшой отступ сверху */
+  padding-left: 50.5%; 
+  padding-right: 16.66%;
+  margin-bottom: 100px; 
+  margin-top: 50px; 
+}
+
+.block-3 {
+  position: relative;
+  margin-left: 50%;
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px; 
+  margin-top: 50px; 
+}
+
+.maincontent .block-3 {
+  margin-left: 0;
+  width: 50%;
+  padding-right: 16.66%;
+  padding-left: 20px;
+}
+
+.maincontent .block-1 {
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.maincontent .block-2 {
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 5px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.block-3 a.header-3 {
+  position: relative;
+}
+
+.block-3 a.header-3::before,
+.block-3 a.header-3::after {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.block-3 a.header-3::before {
+  content: "[";
+  right: 100%;
+  transform: translateX(10px);
+}
+
+.block-3 a.header-3::after {
+  content: "]";
+  left: 100%;
+  transform: translateX(-10px);
+}
+
+.block-3 a.header-3:hover::before,
+.block-3 a.header-3:hover::after {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .header-1 {
-  font-size: 96px;
-  font-family: "Inter", serif;
+  font-size: clamp(36px, 5.5vw + 1rem, 90px);
+  font-family: "Helvetica", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   margin-bottom: 15px;
-  color: black;
+  color: #1A1A1A;
+}
+
+.header-3 {
+  font-size: clamp(36px, 5.5vw + 1rem, 90px);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  margin-bottom: 15px;
+  color: #1A1A1A;
 }
 
 .text-1 {
-  font-size: 24px;
-  font-family: "Inter", serif;
+  font-size: clamp(16px, 1.3vw + 0.5rem, 18px);
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 10;
-  line-height: 1.6;
+  font-weight: 100;
+  line-height: 1.4;
   color: black;
   margin-bottom: 30px;
 }
 
 .text-2 {
-  font-size: 24px;
-  font-family: "Inter", serif;
+  font-size: clamp(16px, 1.3vw + 0.5rem, 18px);
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 10;
-  line-height: 1.6;
+  font-weight: 100;
+  line-height: 1.4;
   color: black;
   margin-top: 60px;
   position: absolute;
-  left: 71%;
-  transform: translateX(-71%);
+  left: 50.5%;
+  right: 16.66%;
+  transform: none;
 }
 
 .text-1-italic {
-  font-size: 24px;
-  font-family: "Inter", serif;
+  font-size: clamp(16px, 1.3vw + 0.5rem, 18px);
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 10;
+  font-weight: 100;
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.4;
   color: black;
   margin-bottom: 10px;
 }
 
 .text-2-italic {
-  font-size: 18px;
-  font-family: "Inter", serif;
+  font-size: clamp(12px, 1vw + 0.5rem, 14px);
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 10;
+  font-weight: 100;
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.4;
   color: black;
   margin-bottom: 10px;
 }
@@ -305,28 +432,28 @@ body {
   right: 0px;
   z-index: 1000;
   text-decoration: none;
-  font-size: 14px; /* Размер шрифта */
-  color: rgba(0, 14, 14, 0.7); /* Полупрозрачный белый текст */
-  font-family: "Inter", serif;
+  font-size: 13px; 
+  color: rgba(0, 14, 14, 0.7); 
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 10;
+  font-weight: 100;
   padding: 10px 15px;
+  transition: color 0.3s ease;
 }
 
 .copyright {
-  position: fixed; /* Фиксированное положение на экране */
-  bottom: 10px; /* Отступ снизу */
-  left: 10px; /* Отступ слева */
-  font-size: 14px; /* Размер шрифта */
-  color: rgba(0, 14, 14, 0.7); /* Полупрозрачный белый текст */
-  font-family: "Inter", serif;
+  position: fixed; 
+  bottom: 10px; 
+  left: 10px; 
+  font-size: 13px; 
+  color: rgba(0, 14, 14, 0.7); 
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 10;
+  font-weight: 100;
+  transition: color 0.3s ease;
 }
 
-
-
-@media screen and (min-width: 910px) and (max-width: 1024px) {
+@media screen and (min-width: 901px) and (max-width: 1024px) {
   .mainlogo {
     height: 80px;
     top: 15px;
@@ -335,188 +462,318 @@ body {
 
   .linkmain {
     top: 110px;
-    left: 20px;
+    left: 55px;
     flex-direction: row;
     gap: 20px;
   }
 
-  .link1, .link2, .link3 {
-    font-size: 18px;
+  .link1,
+  .link2,
+  .link3 {
+    font-size: 16px;
   }
 
   .corner-link {
-    font-size: 12px;
+    font-size: 11px;
     padding: 8px 10px;
   }
 
   .copyright {
-    font-size: 12px;
+    font-size: 11px;
     bottom: 8px;
     left: 8px;
   }
+
+  .block-1,
+  .block-2 {
+    padding-left: 16.66%;
+    padding-right: 16.66%;
+  }
+
+  .text-2 {
+    position: relative;
+    left: auto;
+    padding-left: 16.66%;
+    padding-right: 16.66%;
+    margin-top: 30px;
+    width: auto;
+    right: auto;
+  }
+
+  .text-2-italic {
+    padding-left: 60%;
+    padding-right: 16.66%;
+  }
 }
-
-
 
 /* mobile */
-
 /* Адаптация для маленьких экранов */
 @media (max-width: 900px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
 
-  body, html {
-  overflow-x: hidden;
-}
+  .maincontent {
+    flex-direction: column;
+    margin-top: -100px;
+  }
 
-.page {
-  padding-top: 200px;
-  padding-bottom: 100px;
-}
+  .sm {
+    display: none;
+  }
 
-.header-1 {
-  font-size: 38px;
-  margin-bottom: 15px;
-}
+  .page {
+    padding-top: 150px;
+  }
 
-.text-1 {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
+  .header-1 {
+    font-size: 48px;
+    margin-bottom: 3px;
+    margin-top: 25px;
+  }
 
-.text-1-italic {
-  font-size: 18px;
-}
+  .header-3 {
+    font-size: 48px;
+    margin-bottom: 3px;
+    margin-top: 25px;
+  }
 
-.text-2-italic {
-  width: 45%;
-  padding-left: 185px;
-  font-size: 13px;
-}
+  .text-1 {
+    font-size: 21px;
+    margin-bottom: 30px;
+    text-align: justify;
+    line-height: 1.4;
+  }
 
-.block-1 {
-  padding-left: 38px; /* отступ слева адаптивно, максимум 220px */
-  margin-bottom: 100px; /* оставляем снизу */
-  margin-top: 50px;     /* небольшой отступ сверху */
-}
+  .text-1-italic {
+    font-size: 21px;
+    text-align: justify;
+  }
 
-.block-2 {
-  padding-left: 38px; /* отступ слева адаптивно, максимум 220px */
-  margin-bottom: 100px; /* оставляем снизу */
-  margin-top: 50px;     /* небольшой отступ сверху */
-}
+  .text-2-italic {
+    width: auto;
+    padding-left: 52%;
+    padding-right: 0%;
+    font-size: 12px;
+    text-align: justify;
+  }
+
+  .text-2 {
+    font-size: 21px;
+    position: relative;
+    left: auto;
+    padding-left: 52%;
+    padding-right: 10%;
+    margin-top: 30px;
+    width: auto;
+    text-align: justify;
+    right: auto;
+  }
+
+  .block-1 {
+    padding-left: 9%;
+    padding-right: 10%;
+    margin-bottom: 60px; 
+    margin-top: 0; 
+  }
+
+  .block-2 {
+    padding-left: 9%; 
+    padding-right: 10%;
+    margin-bottom: 100px; 
+    margin-top: 50px; 
+  }
+
+  .block-3,
+  .maincontent .block-3 {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 28%;
+    padding-right: 10%;
+    padding-top: 40px;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    line-height: 0.9;
+  }
+
+  .maincontent .block-1 {
+    width: 100%;
+    padding-left: 9%;
+    padding-right: 10%;
+    margin-bottom: 30px;
+  }
+
+  .maincontent .block-2 {
+    width: 100%;
+    padding-left: 9%;
+    padding-right: 10%;
+    margin-bottom: 30px;
+  }
 
   .mainlogo {
-      position: fixed;
-      height: 50px;
-      left: 7px;
-      top: 10px;
+    position: fixed;
+    height: 63px;
+    left: 7px;
+    top: 10px;
   }
 
   .linkmain {
-    top: 70px; /* Снижаем отступ для маленьких экранов */
-    left: 20px; /* Уменьшаем отступ слева */
+    top: 85px; 
+    left: 20px;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 80px;
   }
 
-  .link1, .link2, .link3 {
-    font-size: 15px;
+  .link1,
+  .link2,
+  .link3 {
+    font-size: 14px;
   }
 
-.corner-link {
-  display: none;
-}
+  .corner-link {
+    display: none;
+  }
 
-.image-wrapper-face {
-  z-index: 10;
-  width: 100%;
-  height: 110px;      
-  overflow: hidden;   
-}
+  div.photo {
+    width: 100%;
+    padding-left: 52%;
+    padding-right: 10%;
+    padding-bottom: 70px;
+    order: 2;
+  }
 
-.image-wrapper-shoulders {
-  z-index: 10;
-  position: relative;
-  width: 100%;       /* весь экран */
-  height: 84px;     /* или любой нужный блок по высоте */
-  overflow: hidden;  /* обрезает лишнее */
-}
+  .image-wrapper-face {
+    z-index: 20;
+    width: 100%;
+    height: 110px;
+    overflow: hidden;
+  }
 
-.image-wrapper-shoulders img {
-  position: absolute;
-  top: 0;
-  left: 0;           /* прижимаем к правому краю */
-  width: 91%;         /* занимает 75% ширины, оставляя слева 25% пустого пространства */
-  height: 100%;       /* растягиваем по высоте контейнера */
-  object-fit: cover;  /* адаптация и обрезка картинки по размеру */
-}
+  .image-wrapper-shoulders {
+    z-index: 10;
+    position: relative;
+    width: 100%; 
+    height: 84px;
+    overflow: hidden;
+  }
 
-.image-wrapper-lips {
-  margin-top: 20%;
-  z-index: 10;
-  width: 100%;
-  height: 150px;      
-  overflow: hidden;   
-}
+  .image-wrapper-shoulders img {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 91%; 
+    height: 100%; 
+    object-fit: cover; 
+  }
 
-.page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
+  .image-wrapper-lips {
+    margin-top: 20%;
+    z-index: 10;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+  }
 
-  background-image: linear-gradient(
-    to right,
-    
-    /* Первая пара линий (левая) */
-    transparent 0,
-    transparent calc(10% - 6px),    /* до первой линии */
-    rgba(0,0,0,0.2) calc(10% - 6px),
-    rgba(0,0,0,0.2) calc(10% - 5px), /* линия 1px */
-    transparent calc(10% - 5px),
-    transparent calc(10% + 4px),     /* промежуток между линиями */
-   
+  .page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
 
-    /* Вторая пара линий (центр) */
-    transparent calc(50% - 6px),
-    rgba(0,0,0,0.2) calc(50% - 6px),
-    rgba(0,0,0,0.2) calc(50% - 5px),
-    transparent calc(50% - 5px),
-    transparent calc(50% + 4px),
-    rgba(0,0,0,0.2) calc(50% + 4px),
-    rgba(0,0,0,0.2) calc(50% + 5px),
-    transparent calc(50% + 5px),
+    background-image: linear-gradient(
+      to right,
 
-    /* Третья пара линий (правая) */
-    transparent calc(90% + 4px),
-    rgba(0,0,0,0.2) calc(90% + 4px),
-    rgba(0,0,0,0.2) calc(90% + 5px),
-    transparent calc(90% + 5px)
-  );
-}
+      /* Первая пара линий (левая) */ transparent 0,
+      transparent calc(10% - 6px),
+      /* до первой линии */ rgba(0, 0, 0, 0.2) calc(10% - 6px),
+      rgba(0, 0, 0, 0.2) calc(10% - 5px),
+      /* линия 1px */ transparent calc(10% - 5px),
+      transparent calc(10% + 4px),
+      /* промежуток между линиями */ /* Вторая пара линий (центр) */ transparent
+        calc(50% - 6px),
+      rgba(0, 0, 0, 0.2) calc(50% - 6px),
+      rgba(0, 0, 0, 0.2) calc(50% - 5px),
+      transparent calc(50% - 5px),
+      transparent calc(50% + 4px),
+      rgba(0, 0, 0, 0.2) calc(50% + 4px),
+      rgba(0, 0, 0, 0.2) calc(50% + 5px),
+      transparent calc(50% + 5px),
+      /* Третья пара линий (правая) */ transparent calc(90% + 4px),
+      rgba(0, 0, 0, 0.2) calc(90% + 4px),
+      rgba(0, 0, 0, 0.2) calc(90% + 5px),
+      transparent calc(90% + 5px)
+    );
+  }
+
+  .maincontent.info-row {
+    flex-direction: row;
+    margin-top: 10px;
+    align-items: flex-start;
+  }
+
+  .maincontent.info-row .block-1 {
+    width: 35%;
+    padding-left: 9%;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .maincontent.info-row .block-2 {
+    width: 65%;
+    padding-left: 20px;
+    padding-right: 7%;
+    margin-bottom: 10px;
+  }
+
+  .maincontent.info-row .text-1 {
+    margin-bottom: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
 }
 
 .maintext-terms {
-  margin-top: 200px;
-  margin-left: 40px;
+  margin-top: 0px;
+  margin-left: 0;
   margin-bottom: 200px;
+  padding-left: 17%;
+  padding-right: 17%;
 }
 
 .textbig-terms {
-  color: black;
-  font-size: 25px;
-  font-family: "Inter", serif;
+  color: #1A1A1A;
+  font-size: clamp(18px, 2.8vw, 23px);
+  font-family: "Helvetica", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 20;
+  font-weight: 300;
   margin-bottom: 15px;
 }
 
 .textsmall-terms {
   color: black;
-  font-size: 15px;
-  font-family: "Inter", serif;
+  font-size: clamp(12px, 1.3vw, 14px);
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 10;
+  font-weight: 100;
   line-height: 1.6;
+  text-align: justify;
+}
+
+@media screen and (min-width: 901px) and (max-width: 1024px) {
+  .maintext-terms {
+    margin-top: 100px;
+    margin-bottom: 150px;
+  }
+}
+
+@media (max-width: 900px) {
+  .maintext-terms {
+    margin-top: 10px;
+    margin-bottom: 100px;
+    padding-left: 9%;
+    padding-right: 10%;
+  }
 }
